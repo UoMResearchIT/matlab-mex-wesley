@@ -31,9 +31,9 @@ for ii = 1:Npoints % outer-loop to be parallised
     % ii-th point
     Pii     = P(:,ii);    
     % vortex filament induction
-    Vf = VortexFilamentLoop(Pii,A_fil,B_fil,Gamma_fil,rc_fil); % inner loop speed to be improved from MEX file
+    Vf = VortexFilamentLoop_mex(Pii,A_fil,B_fil,Gamma_fil,rc_fil); % inner loop speed to be improved from MEX file
     % vortex panel induction
-    Vp = VortexPanelLoop(Pii,A_pan,B_pan,C_pan,D_pan,Gamma_pan,rc_pan); % inner loop speed to be improved from MEX file
+    Vp = VortexPanelLoop_mex(Pii,A_pan,B_pan,C_pan,D_pan,Gamma_pan,rc_pan); % inner loop speed to be improved from MEX file
     % sum the velocities together
     V(:,ii) = Vf + Vp;
 end 
